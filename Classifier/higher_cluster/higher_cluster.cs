@@ -120,11 +120,12 @@ namespace classifier {
                         }
                     }
                     var cluster_range = min_dist;
+					removed[i] = true;
                     // ---------------
                     //Console.WriteLine("> cluster_range: " + cluster_range);
                     // merge with nodes in cluster_range
-                    for (int j = i+1; j < nodes.Count; j++) {
-                        if (!removed[i] && nodes[j].type == NODE.type) {
+                    for (int j = 0; j < nodes.Count; j++) {
+                        if (!removed[j] && nodes[j].type == NODE.type) {
                             var dist = NODE.dist(nodes[j]);
                             if (dist < cluster_range) {
                                 removed[j] = true;
