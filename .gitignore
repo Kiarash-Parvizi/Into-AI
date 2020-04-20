@@ -1,0 +1,8 @@
+.vscode/
+.vs/
+*.exe
+*.out
+*.o
+*.log
+*.bat
+*.sh
